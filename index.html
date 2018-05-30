@@ -23,7 +23,7 @@
             var value = Math.floor((Math.random() * 100) + 1);
             console.log('setting the frontlight to ' + value);
             var _this = this;
-            window.okular.SetFrontlight()
+            window.okular.SetFrontlight(value)
               .then(function () {
                 light.html('Frontlight Brightness: ' + value);
               }).catch(function () {
@@ -34,7 +34,7 @@
           }
       };
       updateBrightness();
-      setInterval(updateBrightness, 10 * 1000);
+      setInterval(updateBrightness, 30 * 1000);
     });
   </script>
   <style>
